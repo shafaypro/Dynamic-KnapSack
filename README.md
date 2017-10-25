@@ -7,7 +7,9 @@ A knapSack OOP followed approach which is used to solve in the Problems  in the 
 # Creating Object:
    ## KS =  KnapSack()
 
-
+# Usage
+    1- import Dynamic_knap
+    2 - use methods guide provided below
   ## Guide:
     1 - Create KnapSack Instance : 
         # KS = KnapSack() 
