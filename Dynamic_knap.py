@@ -43,7 +43,7 @@ class KnapSack:
         no_of_args = len(args) # number of arguments
         if no_of_args == 3:    
             master_list = [tuple(i) for i in zip(args[0], args[1], args[2])]
-            return master_list # Re
+            return tuple(master_list) # Re
         else:
             print("Invalid number of arguments passed in knap sack")
         
