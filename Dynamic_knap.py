@@ -42,8 +42,8 @@ class KnapSack:
     def create_knap_tuple(self, *args):
         no_of_args = len(args) # number of arguments
         if no_of_args == 3:    
-            master_list = [tuple(i) for i in zip(args[0], args[1], args[2])]
-            return tuple(master_list) # Re
+            master_list = tuple([tuple(i) for i in zip(args[0], args[1], args[2])])
+            return master_list # Returns the master list ! 
         else:
             print("Invalid number of arguments passed in knap sack")
         
@@ -54,9 +54,7 @@ class KnapSack:
     def apply_knap_sack(self,max_weight, master_list = None):
         if master_list is not None: 
             solution = self.solve(master_list, max_weight)
-            item_on_list = []
-            for x in solution:
-                item_on_list.append(x[0])
+            item_on_list = [x[0] for x in solution]
             print("value:", self.total_value(solution, max_weight))
             print ("weight:", sum([x[1] for x in solution]))
             return item_on_list, self.total_value(solution, max_weight), sum([x[1] for x in solution])
